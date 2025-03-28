@@ -25,7 +25,7 @@
     }
 
     img {
-        @apply max-w-100% rounded-sm h-auto object-cover;
+        @apply max-w-full rounded-sm h-auto object-cover;
     }
 }
 
