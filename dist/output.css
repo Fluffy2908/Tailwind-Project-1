@@ -15,8 +15,6 @@
     --text-xs--line-height: calc(1 / 0.75);
     --text-sm: 0.875rem;
     --text-sm--line-height: calc(1.25 / 0.875);
-    --text-base: 1rem;
-    --text-base--line-height: calc(1.5 / 1);
     --text-lg: 1.125rem;
     --text-lg--line-height: calc(1.75 / 1.125);
     --text-xl: 1.25rem;
@@ -248,14 +246,8 @@
   .sticky {
     position: sticky;
   }
-  .top-2 {
-    top: calc(var(--spacing) * 2);
-  }
   .top-2\/4 {
     top: calc(2/4 * 100%);
-  }
-  .left-2 {
-    left: calc(var(--spacing) * 2);
   }
   .left-2\/4 {
     left: calc(2/4 * 100%);
@@ -304,9 +296,6 @@
   }
   .row-span-2 {
     grid-row: span 2 / span 2;
-  }
-  .row-span-5 {
-    grid-row: span 5 / span 5;
   }
   .row-span-full {
     grid-row: 1 / -1;
@@ -522,9 +511,6 @@
   .min-h-screen {
     min-height: 100vh;
   }
-  .w-1 {
-    width: calc(var(--spacing) * 1);
-  }
   .w-1\/2 {
     width: calc(1/2 * 100%);
   }
@@ -626,10 +612,6 @@
   .translate-full {
     --tw-translate-x: 100%;
     --tw-translate-y: 100%;
-    translate: var(--tw-translate-x) var(--tw-translate-y);
-  }
-  .-translate-x-2 {
-    --tw-translate-x: calc(var(--spacing) * -2);
     translate: var(--tw-translate-x) var(--tw-translate-y);
   }
   .-translate-x-2\/4 {
@@ -950,9 +932,6 @@
   .justify-items-stretch {
     justify-items: stretch;
   }
-  .gap-2 {
-    gap: calc(var(--spacing) * 2);
-  }
   .gap-5 {
     gap: calc(var(--spacing) * 5);
   }
@@ -985,13 +964,6 @@
       --tw-space-y-reverse: 0;
       margin-block-start: calc(calc(var(--spacing) * 8) * var(--tw-space-y-reverse));
       margin-block-end: calc(calc(var(--spacing) * 8) * calc(1 - var(--tw-space-y-reverse)));
-    }
-  }
-  .space-y-10 {
-    :where(& > :not(:last-child)) {
-      --tw-space-y-reverse: 0;
-      margin-block-start: calc(calc(var(--spacing) * 10) * var(--tw-space-y-reverse));
-      margin-block-end: calc(calc(var(--spacing) * 10) * calc(1 - var(--tw-space-y-reverse)));
     }
   }
   .space-y-reverse {
@@ -2100,15 +2072,6 @@
       }
     }
   }
-  .\*\:space-y-4 {
-    :is(& > *) {
-      :where(& > :not(:last-child)) {
-        --tw-space-y-reverse: 0;
-        margin-block-start: calc(calc(var(--spacing) * 4) * var(--tw-space-y-reverse));
-        margin-block-end: calc(calc(var(--spacing) * 4) * calc(1 - var(--tw-space-y-reverse)));
-      }
-    }
-  }
   .\*\:gap-y-5 {
     :is(& > *) {
       row-gap: calc(var(--spacing) * 5);
@@ -2172,11 +2135,6 @@
       @media (hover: hover) {
         color: var(--color-primary);
       }
-    }
-  }
-  .placeholder\:text-text {
-    &::placeholder {
-      color: var(--color-text);
     }
   }
   .placeholder\:text-text\/80 {
@@ -2250,12 +2208,6 @@
       width: 95%;
     }
   }
-  .before\:origin-left {
-    &::before {
-      content: var(--tw-content);
-      transform-origin: left;
-    }
-  }
   .before\:-translate-y-2\/4 {
     &::before {
       content: var(--tw-content);
@@ -2273,14 +2225,6 @@
     &::before {
       content: var(--tw-content);
       background-color: var(--color-accent);
-    }
-  }
-  .before\:transition {
-    &::before {
-      content: var(--tw-content);
-      transition-property: color, background-color, border-color, outline-color, text-decoration-color, fill, stroke, --tw-gradient-from, --tw-gradient-via, --tw-gradient-to, opacity, box-shadow, transform, translate, scale, rotate, filter, -webkit-backdrop-filter, backdrop-filter;
-      transition-timing-function: var(--tw-ease, var(--default-transition-timing-function));
-      transition-duration: var(--tw-duration, var(--default-transition-duration));
     }
   }
   .before\:content-\[\'\\201C\'\] {
@@ -2336,13 +2280,6 @@
     &::after {
       content: var(--tw-content);
       --tw-scale-x: 0%;
-      scale: var(--tw-scale-x) var(--tw-scale-y);
-    }
-  }
-  .after\:scale-y-0 {
-    &::after {
-      content: var(--tw-content);
-      --tw-scale-y: 0%;
       scale: var(--tw-scale-x) var(--tw-scale-y);
     }
   }
@@ -2402,33 +2339,10 @@
       content: var(--tw-content);
     }
   }
-  .hover\:border {
-    &:hover {
-      @media (hover: hover) {
-        border-style: var(--tw-border-style);
-        border-width: 1px;
-      }
-    }
-  }
-  .hover\:border-2 {
-    &:hover {
-      @media (hover: hover) {
-        border-style: var(--tw-border-style);
-        border-width: 2px;
-      }
-    }
-  }
   .hover\:border-accent {
     &:hover {
       @media (hover: hover) {
         border-color: var(--color-accent);
-      }
-    }
-  }
-  .hover\:border-primary {
-    &:hover {
-      @media (hover: hover) {
-        border-color: var(--color-primary);
       }
     }
   }
@@ -2482,24 +2396,6 @@
       }
     }
   }
-  .\*\:hover\:bg-accent {
-    :is(& > *) {
-      &:hover {
-        @media (hover: hover) {
-          background-color: var(--color-accent);
-        }
-      }
-    }
-  }
-  .\*\:hover\:text-primary {
-    :is(& > *) {
-      &:hover {
-        @media (hover: hover) {
-          color: var(--color-primary);
-        }
-      }
-    }
-  }
   .hover\:after\:origin-right {
     &:hover {
       @media (hover: hover) {
@@ -2532,17 +2428,6 @@
       }
     }
   }
-  .hover\:after\:scale-y-100 {
-    &:hover {
-      @media (hover: hover) {
-        &::after {
-          content: var(--tw-content);
-          --tw-scale-y: 100%;
-          scale: var(--tw-scale-x) var(--tw-scale-y);
-        }
-      }
-    }
-  }
   .focus\:border-2 {
     &:focus {
       border-style: var(--tw-border-style);
@@ -2552,21 +2437,6 @@
   .focus\:border-text {
     &:focus {
       border-color: var(--color-text);
-    }
-  }
-  .focus\:outline-text {
-    &:focus {
-      outline-color: var(--color-text);
-    }
-  }
-  .active\:border-text {
-    &:active {
-      border-color: var(--color-text);
-    }
-  }
-  .active\:outline-text {
-    &:active {
-      outline-color: var(--color-text);
     }
   }
   .sm\:static {
@@ -2589,11 +2459,6 @@
       height: calc(var(--spacing) * 16);
     }
   }
-  .sm\:h-full {
-    @media (width >= 40rem) {
-      height: 100%;
-    }
-  }
   .sm\:scale-y-100 {
     @media (width >= 40rem) {
       --tw-scale-y: 100%;
@@ -2603,16 +2468,6 @@
   .sm\:grid-cols-2 {
     @media (width >= 40rem) {
       grid-template-columns: repeat(2, minmax(0, 1fr));
-    }
-  }
-  .sm\:grid-rows-1 {
-    @media (width >= 40rem) {
-      grid-template-rows: repeat(1, minmax(0, 1fr));
-    }
-  }
-  .sm\:grid-rows-2 {
-    @media (width >= 40rem) {
-      grid-template-rows: repeat(2, minmax(0, 1fr));
     }
   }
   .sm\:grid-rows-\[min-content\] {
@@ -2648,12 +2503,6 @@
   .sm\:px-4 {
     @media (width >= 40rem) {
       padding-inline: calc(var(--spacing) * 4);
-    }
-  }
-  .sm\:text-base {
-    @media (width >= 40rem) {
-      font-size: var(--text-base);
-      line-height: var(--tw-leading, var(--text-base--line-height));
     }
   }
   .sm\:text-lg {
@@ -2777,15 +2626,6 @@
       transition-property: transform, translate, scale, rotate;
       transition-timing-function: var(--tw-ease, var(--default-transition-timing-function));
       transition-duration: var(--tw-duration, var(--default-transition-duration));
-    }
-  }
-  .md\:hover\:z-10 {
-    @media (width >= 48rem) {
-      &:hover {
-        @media (hover: hover) {
-          z-index: 10;
-        }
-      }
     }
   }
   .md\:hover\:scale-110 {
@@ -3091,14 +2931,6 @@
       }
     }
   }
-  .lg\:after\:w-1\/6 {
-    @media (width >= 64rem) {
-      &::after {
-        content: var(--tw-content);
-        width: calc(1/6 * 100%);
-      }
-    }
-  }
   .lg\:after\:w-3\/4 {
     @media (width >= 64rem) {
       &::after {
@@ -3122,19 +2954,6 @@
         --tw-translate-x: calc(calc(2/4 * 100%) * -1);
         translate: var(--tw-translate-x) var(--tw-translate-y);
       }
-    }
-  }
-  .lg\:after\:pb-12 {
-    @media (width >= 64rem) {
-      &::after {
-        content: var(--tw-content);
-        padding-bottom: calc(var(--spacing) * 12);
-      }
-    }
-  }
-  .xl\:absolute {
-    @media (width >= 80rem) {
-      position: absolute;
     }
   }
   .xl\:relative {
@@ -3201,14 +3020,6 @@
       line-height: var(--tw-leading, var(--text-xl--line-height));
     }
   }
-  .xl\:before\:absolute {
-    @media (width >= 80rem) {
-      &::before {
-        content: var(--tw-content);
-        position: absolute;
-      }
-    }
-  }
   .xl\:before\:top-0 {
     @media (width >= 80rem) {
       &::before {
@@ -3238,14 +3049,6 @@
       &::before {
         content: var(--tw-content);
         width: calc(var(--spacing) * 5);
-      }
-    }
-  }
-  .xl\:before\:bg-accent {
-    @media (width >= 80rem) {
-      &::before {
-        content: var(--tw-content);
-        background-color: var(--color-accent);
       }
     }
   }
