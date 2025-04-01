@@ -29,6 +29,7 @@
     --text-7xl--line-height: 1;
     --font-weight-semibold: 600;
     --font-weight-bold: 700;
+    --radius-sm: 0.25rem;
     --ease-in: cubic-bezier(0.4, 0, 1, 1);
     --ease-out: cubic-bezier(0, 0, 0.2, 1);
     --ease-in-out: cubic-bezier(0.4, 0, 0.2, 1);
@@ -3078,7 +3079,7 @@
   }
   img {
     height: 100%;
-    border-radius: 0.25rem;
+    border-radius: var(--radius-sm);
     object-fit: cover;
   }
 }
