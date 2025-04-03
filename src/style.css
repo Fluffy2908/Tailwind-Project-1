@@ -25,7 +25,7 @@
     }
 
     img {
-        @apply rounded h-full object-cover;
+        @apply object-cover;
     }
 }
 
