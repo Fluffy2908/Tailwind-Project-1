@@ -264,9 +264,6 @@
   .z-10 {
     z-index: 10;
   }
-  .z-\[1\] {
-    z-index: 1;
-  }
   .z-\[11\] {
     z-index: 11;
   }
@@ -2263,12 +2260,6 @@
       z-index: calc(1 * -1);
     }
   }
-  .after\:-z-\[1\] {
-    &::after {
-      content: var(--tw-content);
-      z-index: calc(1 * -1);
-    }
-  }
   .after\:z-10 {
     &::after {
       content: var(--tw-content);
@@ -3106,7 +3097,6 @@
     border-color: var(--color-gray-200, currentColor);
   }
   img {
-    height: 100%;
     border-radius: 0.25rem;
     object-fit: cover;
   }
