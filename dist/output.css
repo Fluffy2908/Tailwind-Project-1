@@ -3153,6 +3153,8 @@
     border-color: var(--color-gray-200, currentColor);
   }
   img {
+    height: 100%;
+    border-radius: var(--radius-sm);
     object-fit: cover;
   }
 }
