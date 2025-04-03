@@ -3097,7 +3097,6 @@
     border-color: var(--color-gray-200, currentColor);
   }
   img {
-    border-radius: 0.25rem;
     object-fit: cover;
   }
 }
