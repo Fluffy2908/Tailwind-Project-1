@@ -29,6 +29,7 @@
     --text-7xl--line-height: 1;
     --font-weight-semibold: 600;
     --font-weight-bold: 700;
+    --radius-sm: 0.25rem;
     --ease-in: cubic-bezier(0.4, 0, 1, 1);
     --ease-out: cubic-bezier(0, 0, 0.2, 1);
     --ease-in-out: cubic-bezier(0.4, 0, 0.2, 1);
@@ -256,6 +257,9 @@
   }
   .isolation-auto {
     isolation: auto;
+  }
+  .z-1 {
+    z-index: 1;
   }
   .z-10 {
     z-index: 10;
@@ -1083,6 +1087,9 @@
   }
   .rounded-full {
     border-radius: calc(infinity * 1px);
+  }
+  .rounded-sm {
+    border-radius: var(--radius-sm);
   }
   .rounded-s {
     border-start-start-radius: 0.25rem;
@@ -2081,6 +2088,11 @@
       border-radius: 0.25rem;
     }
   }
+  .\*\:rounded-sm {
+    :is(& > *) {
+      border-radius: var(--radius-sm);
+    }
+  }
   .\*\:border-2 {
     :is(& > *) {
       border-style: var(--tw-border-style);
@@ -2245,6 +2257,12 @@
       left: calc(var(--spacing) * 0);
     }
   }
+  .after\:-z-1 {
+    &::after {
+      content: var(--tw-content);
+      z-index: calc(1 * -1);
+    }
+  }
   .after\:-z-\[1\] {
     &::after {
       content: var(--tw-content);
@@ -2293,6 +2311,12 @@
     &::after {
       content: var(--tw-content);
       border-radius: 0.25rem;
+    }
+  }
+  .after\:rounded-sm {
+    &::after {
+      content: var(--tw-content);
+      border-radius: var(--radius-sm);
     }
   }
   .after\:bg-accent {
@@ -3066,6 +3090,11 @@
       border-radius: 0.25rem;
     }
   }
+  .\32 xl\:rounded-sm {
+    @media (width >= 96rem) {
+      border-radius: var(--radius-sm);
+    }
+  }
   .\32 xl\:bg-primary {
     @media (width >= 96rem) {
       background-color: var(--color-primary);
@@ -3077,6 +3106,8 @@
     border-color: var(--color-gray-200, currentColor);
   }
   img {
+    height: 100%;
+    border-radius: 0.25rem;
     object-fit: cover;
   }
 }
